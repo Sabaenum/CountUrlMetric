@@ -1,0 +1,7 @@
+{
+    "require": {
+        "twig/twig": "^3.0",
+        "phlib/db": "^1.1",
+      "ext-json": "*"
+    }
+}
