@@ -31,7 +31,7 @@ class Route
      */
     public function getActiveUrl(): array
     {
-        $result = $this->db->query("SELECT * FROM urls WHERE url = ? ",[$this->url]);
+        $result = $this->db->query("SELECT * FROM urls WHERE url = ?  AND expire > NOW()",[$this->url]);
         if(!$result->rowCount()){
             return ['404' => 'Not Found'];
         }
